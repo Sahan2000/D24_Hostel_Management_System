@@ -10,10 +10,10 @@ import lombok.*;
 @Setter
 @Getter
 @ToString
+
 @Table(
-        uniqueConstraints = {
-                @UniqueConstraint(name = "unique_email", columnNames = "email")
-        }
+        uniqueConstraints = {@UniqueConstraint(name = "unique_email", columnNames = "email"),
+                @UniqueConstraint(name = "unique_userName", columnNames = "userName")}
 )
 public class User {
     @Id

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="574.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24_hostel_management_system.controller.LoginPageFormController">
+<AnchorPane fx:id="root" prefHeight="574.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24_hostel_management_system.controller.LoginPageFormController">
    <children>
       <AnchorPane prefHeight="574.0" prefWidth="536.0" style="-fx-background-color: linear-gradient(to bottom right, #07F4E9, #A3EDEE,#0C829B );">
          <children>
@@ -30,7 +30,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="102.0" fitWidth="103.0" layoutX="666.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="102.0" fitWidth="103.0" layoutX="666.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/icons8-user-60.png" />
          </image>
@@ -45,17 +45,11 @@
             <Font size="16.0" />
          </font>
       </JFXPasswordField>
-      <JFXButton layoutX="679.0" layoutY="437.0" prefHeight="32.0" prefWidth="79.0" styleClass="calendar" stylesheets="@../styles/button.css" text="Login" textFill="#1119b0">
+      <JFXButton fx:id="loginBtn" layoutX="679.0" layoutY="437.0" onAction="#loginBtnOnAction" prefHeight="32.0" prefWidth="79.0" styleClass="calendar" stylesheets="@../styles/button.css" text="Login" textFill="#1119b0">
          <font>
             <Font size="16.0" />
          </font>
       </JFXButton>
-      <Label layoutX="714.0" layoutY="379.0" text="Forgot Password" underline="true" />
-      <Label layoutX="793.0" layoutY="19.0" text="Sign up" textFill="#460000" underline="true">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
       <JFXTextField fx:id="txtPassword" labelFloat="true" layoutX="595.0" layoutY="342.0" onAction="#txtPasswordOnAction" prefHeight="32.0" prefWidth="232.0" promptText="Password :">
          <font>
             <Font size="16.0" />

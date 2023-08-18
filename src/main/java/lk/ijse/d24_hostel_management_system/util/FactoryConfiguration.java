@@ -32,6 +32,7 @@ public class FactoryConfiguration {
 
         // add annotated class to configure
         configuration.addAnnotatedClass(User.class);
+        sessionFactory = configuration.buildSessionFactory();
     }
 
     public static FactoryConfiguration getInstance(){
