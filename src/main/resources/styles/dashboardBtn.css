@@ -1,0 +1,6 @@
+.calendar{
+    -fx-border-radius: 30 0 30 0;
+    -fx-background-radius: 30 0 30 0;
+    -fx-background-color: linear-gradient(to bottom, #000066 0%, #0000cc 100%);
+    -fx-text-fill: white;
+}

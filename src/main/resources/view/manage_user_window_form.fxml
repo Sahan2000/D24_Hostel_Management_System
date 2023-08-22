@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1523.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24_hostel_management_system.controller.ManageUserWindowFormController">
+   <children>
+      <Label layoutX="411.0" layoutY="44.0" text="Users Manage Form" textFill="#0c829b">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="80.0" arcWidth="80.0" fill="WHITE" height="690.0" layoutX="57.0" layoutY="217.0" stroke="#0c829b" strokeType="INSIDE" width="461.0">
+         <effect>
+            <DropShadow color="#0c829b" />
+         </effect>
+      </Rectangle>
+      <Line endX="-78.0" endY="765.0" layoutX="683.0" layoutY="205.0" startX="-78.0" startY="-66.0" />
+      <Rectangle arcHeight="80.0" arcWidth="80.0" fill="WHITE" height="690.0" layoutX="688.0" layoutY="217.0" stroke="#0c829b" strokeType="INSIDE" width="798.0">
+         <effect>
+            <DropShadow color="#0c829b" />
+         </effect>
+      </Rectangle>
+      <TableView layoutX="733.0" layoutY="246.0" prefHeight="626.0" prefWidth="705.0">
+        <columns>
+          <TableColumn prefWidth="130.0" text="User ID" />
+          <TableColumn prefWidth="174.0" text="User Name" />
+            <TableColumn prefWidth="175.0" text="Password" />
+            <TableColumn prefWidth="225.0" text="Email" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="282.0" layoutY="769.0" prefHeight="32.0" prefWidth="75.0" style="-fx-background-color: #0c829b;" text="Save" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="393.0" layoutY="769.0" style="-fx-background-color: #BB2525;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></JFXButton>
+      <JFXTextField layoutX="1111.0" layoutY="131.0" prefHeight="32.0" prefWidth="266.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="1384.0" layoutY="129.0" prefHeight="26.0" prefWidth="37.0" text=".">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-search-52.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <DropShadow height="42.25" radius="17.59" spread="0.06" width="30.11" />
+         </effect>
+      </JFXButton>
+      <Label layoutX="102.0" layoutY="356.0" text="User Name :">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="465.0" text="Password : ">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="574.0" text="Password Hint : ">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="676.0" text="Email :">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField layoutX="242.0" layoutY="349.0" prefHeight="40.0" prefWidth="249.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="222.0" layoutY="458.0" prefHeight="40.0" prefWidth="249.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="272.0" layoutY="567.0" prefHeight="40.0" prefWidth="213.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="181.0" layoutY="669.0" prefHeight="40.0" prefWidth="294.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
