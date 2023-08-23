@@ -5,90 +5,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="1000.0" prefWidth="1523.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24_hostel_management_system.controller.ManageRoomsWindowFormController">
    <children>
-      <Rectangle arcHeight="80.0" arcWidth="80.0" fill="WHITE" height="690.0" layoutX="66.0" layoutY="230.0" stroke="#0c829b" strokeType="INSIDE" width="461.0">
-         <effect>
-            <DropShadow color="#0c829b" />
-         </effect>
-      </Rectangle>
-      <Rectangle arcHeight="80.0" arcWidth="80.0" fill="WHITE" height="690.0" layoutX="679.0" layoutY="227.0" stroke="#0c829b" strokeType="INSIDE" width="798.0">
-         <effect>
-            <DropShadow color="#0c829b" />
-         </effect>
-      </Rectangle>
-      <Line endX="-78.0" endY="765.0" layoutX="683.0" layoutY="195.0" startX="-78.0" startY="-41.66667175292969" />
-      <Label layoutX="436.0" layoutY="64.0" text="Manage Rooms" textFill="#0c829b">
-         <font>
-            <Font size="41.0" />
-         </font>
-      </Label>
-      <Label layoutX="108.0" layoutY="325.0" text="Room ID :">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="108.0" layoutY="445.0" text="Type :">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="108.0" layoutY="565.0" text="Key Money :">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="108.0" layoutY="695.0" text="Qty : ">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <TextField layoutX="229.0" layoutY="315.0" prefHeight="40.0" prefWidth="245.0">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </TextField>
-      <TextField layoutX="193.0" layoutY="437.0" prefHeight="40.0" prefWidth="245.0">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </TextField>
-      <TextField layoutX="250.0" layoutY="559.0" prefHeight="40.0" prefWidth="219.0">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </TextField>
-      <TextField layoutX="172.0" layoutY="689.0" prefHeight="40.0" prefWidth="78.0">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </TextField>
-      <JFXButton layoutX="253.0" layoutY="820.0" prefHeight="32.0" prefWidth="75.0" style="-fx-background-color: #0c829b;" text="Save" textFill="WHITE">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="376.0" layoutY="820.0" style="-fx-background-color: #BB2525;" text="Delete" textFill="#eee9e9">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </JFXButton>
-      <JFXTextField layoutX="1131.0" layoutY="141.0" prefHeight="32.0" prefWidth="266.0">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </JFXTextField>
-      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="1398.0" layoutY="141.0" prefHeight="32.0" prefWidth="26.0">
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="1308.0" layoutY="96.0" prefHeight="32.0" prefWidth="26.0">
          <graphic>
             <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -97,13 +21,73 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <TableView layoutX="723.0" layoutY="271.0" prefHeight="608.0" prefWidth="711.0">
-        <columns>
-          <TableColumn prefWidth="161.0" text="Room ID " />
-          <TableColumn prefWidth="204.0" text="Type" />
-            <TableColumn prefWidth="209.0" text="Key Money(LKR)" />
-            <TableColumn prefWidth="136.0" text="RoomQty" />
-        </columns>
+      <Label layoutX="76.0" layoutY="67.0" opacity="0.68" text="Manage Rooms">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="174.0" text="Room ID :" textFill="#0c829b">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="#0c829b" layoutX="76.0" layoutY="213.0" promptText="S-0001" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="74.0" layoutY="285.0" text="Type :" textFill="#0c829b">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="#0c829b" layoutX="78.0" layoutY="328.0" promptText="Kashmi" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="75.0" layoutY="392.0" text="Key Money :" textFill="#0c829b">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="#0c829b" layoutX="78.0" layoutY="437.0" promptText="Panadura" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="75.0" layoutY="512.0" text="Qty : " textFill="#0c829b">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="#0c829b" layoutX="77.0" layoutY="557.0" promptText="0740872265" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="152.0" layoutY="669.0" opacity="0.85" prefHeight="29.0" prefWidth="84.0" style="-fx-background-color: #0C829B;" text="Save" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="266.0" layoutY="669.0" opacity="0.64" style="-fx-background-color: red mat;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <TableView layoutX="475.0" layoutY="188.0" prefHeight="675.0" prefWidth="964.0" style="-fx-border-color: #0C829B;">
+         <columns>
+            <TableColumn prefWidth="212.0" text="Room ID" />
+            <TableColumn prefWidth="260.0" text="Type" />
+            <TableColumn prefWidth="295.0" text="Key Money (LKR)" />
+            <TableColumn prefWidth="195.0" text="RoomQty" />
+         </columns>
       </TableView>
+      <JFXTextField focusColor="#0c829b" layoutX="973.0" layoutY="83.0" prefHeight="47.0" prefWidth="338.0" promptText="Search here" unFocusColor="#0c829b">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXTextField>
    </children>
 </AnchorPane>

@@ -11,15 +11,15 @@
    <children>
       <ImageView fitHeight="161.0" fitWidth="193.0" layoutX="346.0" layoutY="117.0" pickOnBounds="true">
          <image>
-            <Image url="@../images/imageedit_45_4490681655.png" />
+            <Image url="@../images/imageedit_3_5124577943.gif" />
          </image>
       </ImageView>
-      <Label layoutX="217.0" layoutY="287.0" text="D24 Hostel Management " textFill="#1119b0">
+      <Label layoutX="217.0" layoutY="287.0" text="D24 Hostel Management " textFill="#0c829b">
          <font>
             <Font name="Noto Serif CJK HK Bold" size="35.0" />
          </font>
       </Label>
-      <Label layoutX="376.0" layoutY="329.0" text="System" textFill="#1119b0">
+      <Label layoutX="376.0" layoutY="329.0" text="System" textFill="#0c829b">
          <font>
             <Font name="Noto Serif CJK HK Bold" size="35.0" />
          </font>

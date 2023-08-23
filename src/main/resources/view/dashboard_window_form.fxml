@@ -7,46 +7,46 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24_hostel_management_system.controller.DashboardWindowFormController">
+<AnchorPane fx:id="root1" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24_hostel_management_system.controller.DashboardWindowFormController">
    <children>
       <AnchorPane prefHeight="1000.0" prefWidth="398.0" style="-fx-background-color: linear-gradient(to bottom right, #07F4E9, #A3EDEE,#0C829B );">
          <children>
             <ImageView fitHeight="140.0" fitWidth="157.0" layoutX="121.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/imageedit_45_4490681655.png" />
+                  <Image url="@../images/imageedit_3_5124577943.gif" />
                </image>
             </ImageView>
-            <JFXButton layoutX="54.0" layoutY="362.0" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="Manage Users" textFill="WHITE">
+            <JFXButton fx:id="dashboardBtn" layoutX="54.0" layoutY="362.0" onAction="#dashboardBtnOnAction" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="DashBboard" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="54.0" layoutY="480.0" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="Manage Students" textFill="WHITE">
+            <JFXButton fx:id="manageStudentBtn" layoutX="54.0" layoutY="480.0" onAction="#manageStudentOnAction" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="Manage Students" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="54.0" layoutY="600.0" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="Manage Rooms" textFill="WHITE">
+            <JFXButton fx:id="manageRoomsBtn" layoutX="54.0" layoutY="600.0" onAction="#manageRoomsBtnOnAtion" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="Manage Rooms" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="54.0" layoutY="722.0" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="Manage Users" textFill="WHITE">
+            <JFXButton fx:id="manageUsersBtn" layoutX="54.0" layoutY="722.0" onAction="#manageUsersBtnOnAction" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="Manage Users" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
             </JFXButton>
-            <Label layoutX="53.0" layoutY="185.0" text="D24 Hostel Management " textFill="#1119b0">
+            <Label layoutX="53.0" layoutY="185.0" text="D24 Hostel Management " textFill="#0c829b">
                <font>
                   <Font size="23.0" />
                </font>
             </Label>
-            <Label layoutX="157.0" layoutY="228.0" text="System" textFill="#1119b0">
+            <Label layoutX="157.0" layoutY="228.0" text="System" textFill="#0c829b">
                <font>
                   <Font size="23.0" />
                </font>
             </Label>
-            <JFXButton layoutX="69.0" layoutY="925.0" prefHeight="53.0" prefWidth="112.0" style="-fx-background-color: linear-gradient(to bottom, #000066 0%, #0000cc 100%); -fx-background-radius: 25;" text="Exit" textFill="WHITE">
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="166.0" layoutY="905.0" onAction="#logoutBtnOnAction" prefHeight="55.0" prefWidth="58.0" style="-fx-background-radius: 25;" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="46.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                      <image>
