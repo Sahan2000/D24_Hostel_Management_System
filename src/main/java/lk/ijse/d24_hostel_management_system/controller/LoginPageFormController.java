@@ -102,4 +102,14 @@ public class LoginPageFormController implements Initializable {
             stage.show();
         }
     }
+
+    @FXML
+    void signUpOnMouseClicked(MouseEvent event) throws IOException {
+        AnchorPane load = FXMLLoader.load(getClass().getResource("/view/registerration_form.fxml"));
+        Stage stage = new Stage();
+        stage.setScene(new Scene(load));
+        stage.setTitle("Sign up page");
+        stage.centerOnScreen();
+        stage.show();
+    }
 }

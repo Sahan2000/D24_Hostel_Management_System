@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b988079-10ce-4c7b-ac53-4ac3cf59f871" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/forgotPassword_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/forgotPassword_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/47a50712-0486-4ccc-bcd3-0066a8c022e8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/47a50712-0486-4ccc-bcd3-0066a8c022e8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/UserBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/UserBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/UserBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/UserBOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/LoginPageFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/LoginPageFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/RegisterrationFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/RegisterrationFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/CrudDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/CrudDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login_page_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login_page_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/registerration_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/registerration_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +106,7 @@
       <workItem from="1692502083892" duration="6535000" />
       <workItem from="1692603177557" duration="4152000" />
       <workItem from="1692625976961" duration="1202000" />
-      <workItem from="1692722501846" duration="16918000" />
+      <workItem from="1692722501846" duration="27193000" />
     </task>
     <servers />
   </component>

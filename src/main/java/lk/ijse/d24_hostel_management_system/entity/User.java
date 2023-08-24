@@ -15,10 +15,17 @@ import lombok.*;
         uniqueConstraints = {@UniqueConstraint(name = "unique_email", columnNames = "email"),
                 @UniqueConstraint(name = "unique_userName", columnNames = "userName")}
 )
+
+@NamedQuery(
+        name = "User.findLatestUserId",
+        query = "SELECT u.userId FROM User u ORDER BY u.userId DESC"
+)
+
 public class User {
     @Id
     private String userId;
     private String userName;
     private String email;
     private String password;
+    private String password_hint;
 }
