@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b988079-10ce-4c7b-ac53-4ac3cf59f871" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/DashboardIconFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard_icon_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/DashboardWindowFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/DashboardWindowFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/dashboardBtn.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/dashboardBtn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard_window_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard_window_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/loading_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/loading_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login_page_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login_page_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/manage_rooms_window_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/manage_rooms_window_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/manage_student_window_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/manage_student_window_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/manage_user_window_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/manage_user_window_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/forgotPassword_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/forgotPassword_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +95,7 @@
       <workItem from="1692502083892" duration="6535000" />
       <workItem from="1692603177557" duration="4152000" />
       <workItem from="1692625976961" duration="1202000" />
-      <workItem from="1692722501846" duration="12813000" />
+      <workItem from="1692722501846" duration="16918000" />
     </task>
     <servers />
   </component>
