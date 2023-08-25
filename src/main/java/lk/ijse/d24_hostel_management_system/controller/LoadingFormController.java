@@ -42,7 +42,7 @@ public class LoadingFormController implements Initializable {
                 Scene loginScene = new Scene(loginParent);
                 Stage loginStage = new Stage();
                 loginStage.setResizable(false);
-                Image icon = new Image(getClass().getResourceAsStream("/images/Screenshot_from_2023-08-17_09-02-38-removebg-preview.png"));
+                Image icon = new Image(getClass().getResourceAsStream("/images/imageedit_3_5124577943.gif"));
                 loginStage.getIcons().add(icon);
                 loginStage.setTitle("D24 Hostel Management System - Login Page");
                 loginStage.setScene(loginScene);

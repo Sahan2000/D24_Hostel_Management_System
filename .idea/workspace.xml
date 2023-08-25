@@ -7,16 +7,8 @@
     <list default="true" id="9b988079-10ce-4c7b-ac53-4ac3cf59f871" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/47a50712-0486-4ccc-bcd3-0066a8c022e8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/47a50712-0486-4ccc-bcd3-0066a8c022e8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/UserBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/UserBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/UserBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/UserBOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/LoadingFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/LoadingFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/LoginPageFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/LoginPageFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/RegisterrationFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/RegisterrationFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/CrudDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/CrudDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login_page_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login_page_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/registerration_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/registerration_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,29 +35,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/sahan/IdeaProjects/Hibernate/D24-Hostel-Management-System1/src/main/resources/images",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/home/sahan/IdeaProjects/Hibernate/D24-Hostel-Management-System1/src/main/java/org/example/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sahan/IdeaProjects/Hibernate/D24-Hostel-Management-System1/src/main/resources/images&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/sahan/IdeaProjects/Hibernate/D24-Hostel-Management-System1/src/main/java/org/example/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/images" />
@@ -106,7 +98,8 @@
       <workItem from="1692502083892" duration="6535000" />
       <workItem from="1692603177557" duration="4152000" />
       <workItem from="1692625976961" duration="1202000" />
-      <workItem from="1692722501846" duration="27193000" />
+      <workItem from="1692722501846" duration="27391000" />
+      <workItem from="1692934223497" duration="6207000" />
     </task>
     <servers />
   </component>
@@ -120,6 +113,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/LoginPageFormController.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
