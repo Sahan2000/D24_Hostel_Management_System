@@ -1123,55 +1123,178 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <user id="306" parent="1" name="root">
       <Host>localhost</Host>
     </user>
-    <table id="307" parent="300" name="User">
+    <table id="307" parent="300" name="Reservation">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="308" parent="307" name="userId">
+    <table id="308" parent="300" name="Room">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="309" parent="300" name="Student">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="310" parent="300" name="User">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="311" parent="307" name="res_id">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="309" parent="307" name="email">
-      <DasType>varchar(255)|0s</DasType>
+    <column id="312" parent="307" name="date">
+      <DasType>date|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="310" parent="307" name="password">
+    <column id="313" parent="307" name="status">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="311" parent="307" name="password_hint">
+    <column id="314" parent="307" name="room_room_type_id">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="312" parent="307" name="userName">
+    <column id="315" parent="307" name="student_student_id">
       <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
     </column>
-    <index id="313" parent="307" name="PRIMARY">
-      <ColNames>userId</ColNames>
+    <foreign-key id="316" parent="307" name="FKomowulf0dsdoma1g0p3dt2csg">
+      <ColNames>room_room_type_id</ColNames>
+      <RefColNames>room_type_id</RefColNames>
+      <RefTableName>Room</RefTableName>
+    </foreign-key>
+    <foreign-key id="317" parent="307" name="FKximir3hfxg5f8ej1uuxpkhto">
+      <ColNames>student_student_id</ColNames>
+      <RefColNames>student_id</RefColNames>
+      <RefTableName>Student</RefTableName>
+    </foreign-key>
+    <index id="318" parent="307" name="PRIMARY">
+      <ColNames>res_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="314" parent="307" name="unique_email">
-      <ColNames>email</ColNames>
+    <index id="319" parent="307" name="FKomowulf0dsdoma1g0p3dt2csg">
+      <ColNames>room_room_type_id</ColNames>
       <Type>btree</Type>
-      <Unique>1</Unique>
     </index>
-    <index id="315" parent="307" name="unique_userName">
-      <ColNames>userName</ColNames>
+    <index id="320" parent="307" name="FKximir3hfxg5f8ej1uuxpkhto">
+      <ColNames>student_student_id</ColNames>
       <Type>btree</Type>
-      <Unique>1</Unique>
     </index>
-    <key id="316" parent="307" name="PRIMARY">
+    <key id="321" parent="307" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="317" parent="307" name="unique_email">
+    <column id="322" parent="308" name="room_type_id">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="323" parent="308" name="key_money">
+      <DasType>double|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="324" parent="308" name="qty">
+      <DasType>int|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="325" parent="308" name="type">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <index id="326" parent="308" name="PRIMARY">
+      <ColNames>room_type_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="327" parent="308" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="328" parent="309" name="student_id">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="329" parent="309" name="address">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="330" parent="309" name="contact_no">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="331" parent="309" name="date">
+      <DasType>date|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="332" parent="309" name="gender">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="333" parent="309" name="name">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <index id="334" parent="309" name="PRIMARY">
+      <ColNames>student_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="335" parent="309" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="336" parent="310" name="userId">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="337" parent="310" name="email">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="338" parent="310" name="password">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="339" parent="310" name="password_hint">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="340" parent="310" name="userName">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <index id="341" parent="310" name="PRIMARY">
+      <ColNames>userId</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="342" parent="310" name="unique_email">
+      <ColNames>email</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="343" parent="310" name="unique_userName">
+      <ColNames>userName</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="344" parent="310" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="345" parent="310" name="unique_email">
       <UnderlyingIndexName>unique_email</UnderlyingIndexName>
     </key>
-    <key id="318" parent="307" name="unique_userName">
+    <key id="346" parent="310" name="unique_userName">
       <UnderlyingIndexName>unique_userName</UnderlyingIndexName>
     </key>
   </database-model>

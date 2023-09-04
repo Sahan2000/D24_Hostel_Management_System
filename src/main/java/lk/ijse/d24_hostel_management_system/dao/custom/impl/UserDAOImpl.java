@@ -1,6 +1,7 @@
 package lk.ijse.d24_hostel_management_system.dao.custom.impl;
 
 import lk.ijse.d24_hostel_management_system.dao.custom.UserDAO;
+import lk.ijse.d24_hostel_management_system.entity.Student;
 import lk.ijse.d24_hostel_management_system.entity.User;
 import lk.ijse.d24_hostel_management_system.util.FactoryConfiguration;
 import org.hibernate.Session;
@@ -57,5 +58,10 @@ public class UserDAOImpl implements UserDAO {
         session.close();
 
         return true;
+    }
+
+    @Override
+    public boolean delete(Student student) {
+        return false;
     }
 }

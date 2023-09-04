@@ -1,5 +1,8 @@
 package lk.ijse.d24_hostel_management_system.util;
 
+import lk.ijse.d24_hostel_management_system.entity.Reservation;
+import lk.ijse.d24_hostel_management_system.entity.Room;
+import lk.ijse.d24_hostel_management_system.entity.Student;
 import lk.ijse.d24_hostel_management_system.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -31,7 +34,10 @@ public class FactoryConfiguration {
         configuration.setProperties(properties);
 
         // add annotated class to configure
-        configuration.addAnnotatedClass(User.class);
+        configuration.addAnnotatedClass(User.class)
+                .addAnnotatedClass(Student.class)
+                .addAnnotatedClass(Room.class)
+                .addAnnotatedClass(Reservation.class);
         sessionFactory = configuration.buildSessionFactory();
     }
 

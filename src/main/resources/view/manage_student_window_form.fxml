@@ -24,7 +24,7 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="#0c829b" layoutX="66.0" layoutY="203.0" promptText="S-0001" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+      <JFXTextField fx:id="txtStudentId" focusColor="#0c829b" layoutX="66.0" layoutY="203.0" onAction="#txtStudentIdOnAction" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
          <font>
             <Font size="23.0" />
          </font>
@@ -44,7 +44,7 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="#0c829b" layoutX="68.0" layoutY="318.0" promptText="Kashmi" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+      <JFXTextField fx:id="txtStudentName" focusColor="#0c829b" layoutX="68.0" layoutY="318.0" onAction="#txtStudentNameOnAction" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
          <font>
             <Font size="23.0" />
          </font>
@@ -54,7 +54,7 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="#0c829b" layoutX="68.0" layoutY="427.0" promptText="Panadura" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+      <JFXTextField fx:id="txtAddress" focusColor="#0c829b" layoutX="68.0" layoutY="427.0" onAction="#txtAddressOnAction" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
          <font>
             <Font size="23.0" />
          </font>
@@ -64,7 +64,7 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="#0c829b" layoutX="67.0" layoutY="547.0" promptText="0740872265" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+      <JFXTextField fx:id="txtContact" focusColor="#0c829b" layoutX="67.0" layoutY="547.0" onAction="#txtContactOnAction" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
          <font>
             <Font size="23.0" />
          </font>
@@ -74,28 +74,28 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <DatePicker editable="false" layoutX="66.0" layoutY="663.0" prefHeight="48.0" prefWidth="273.0" promptText="07 / 4 / 2023" style="-fx-border-color: #0C829B;" />
+      <DatePicker fx:id="dob" editable="false" layoutX="66.0" layoutY="663.0" prefHeight="48.0" prefWidth="273.0" promptText="07 / 4 / 2023" style="-fx-border-color: #0C829B;" />
       <Label layoutX="68.0" layoutY="735.0" text="Gender :" textFill="#0c829b">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <RadioButton layoutX="96.0" layoutY="782.0" mnemonicParsing="false" text="Male">
+      <RadioButton fx:id="maleBtn" layoutX="96.0" layoutY="782.0" mnemonicParsing="false" text="Male">
          <font>
             <Font size="23.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="216.0" layoutY="782.0" mnemonicParsing="false" text="Female">
+      <RadioButton fx:id="femaleBtn" layoutX="216.0" layoutY="782.0" mnemonicParsing="false" text="Female">
          <font>
             <Font size="23.0" />
          </font>
       </RadioButton>
-      <JFXButton layoutX="142.0" layoutY="859.0" opacity="0.85" prefHeight="29.0" prefWidth="84.0" style="-fx-background-color: #0C829B;" text="Save" textFill="WHITE">
+      <JFXButton layoutX="142.0" layoutY="859.0" onAction="#saveBtnOnAction" opacity="0.85" prefHeight="29.0" prefWidth="84.0" style="-fx-background-color: #0C829B;" text="Save" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="256.0" layoutY="859.0" opacity="0.64" style="-fx-background-color: red mat;" text="Delete" textFill="WHITE">
+      <JFXButton fx:id="deleteBtn" layoutX="256.0" layoutY="859.0" onAction="#deleteBtnOnAction" opacity="0.64" style="-fx-background-color: red mat;" text="Delete" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
