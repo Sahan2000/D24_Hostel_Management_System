@@ -64,4 +64,9 @@ public class UserDAOImpl implements UserDAO {
     public boolean delete(Student student) {
         return false;
     }
+
+    @Override
+    public List<Student> getAll() {
+        return null;
+    }
 }

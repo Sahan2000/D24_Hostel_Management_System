@@ -1,21 +1,43 @@
 package lk.ijse.d24_hostel_management_system.controller;
 
 import com.jfoenix.controls.JFXTextField;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.RadioButton;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.d24_hostel_management_system.bo.BOFactory;
 import lk.ijse.d24_hostel_management_system.bo.custom.StudentBO;
 import lk.ijse.d24_hostel_management_system.dto.StudentDTO;
+import lk.ijse.d24_hostel_management_system.tm.StudentTM;
 
 import java.net.URL;
 import java.sql.Date;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ManageStudentWindowFormController implements Initializable {
+    @FXML
+    private TableColumn<?, ?> colStudentId;
+
+    @FXML
+    private TableColumn<?, ?> colName;
+
+    @FXML
+    private TableColumn<?, ?> colAdress;
+
+    @FXML
+    private TableColumn<?, ?> colContact;
+
+    @FXML
+    private TableColumn<?, ?> colDOB;
+
+    @FXML
+    private TableColumn<?, ?> colGender;
+    @FXML
+    private TableView<StudentTM> studentTbl;
 
     @FXML
     private JFXTextField txtStudentId;
@@ -42,21 +64,7 @@ public class ManageStudentWindowFormController implements Initializable {
 
     @FXML
     void deleteBtnOnAction(ActionEvent event) {
-        StudentDTO studentDTO = new StudentDTO();
-        studentDTO.setStudent_id(txtStudentId.getText());
-        studentDTO.setName(txtStudentName.getText());
-        studentDTO.setAddress(txtAddress.getText());
-        studentDTO.setContact_no(txtContact.getText());
-        studentDTO.setDate(Date.valueOf(dob.getValue()));
-        studentDTO.setGender((maleBtn.isSelected()) ? "Male" : "Female");
 
-        boolean isDeleted = studentBO.deleteStudent(studentDTO);
-
-        if (isDeleted){
-            new Alert(Alert.AlertType.CONFIRMATION, "Student deleted!...").show();
-        }else {
-            new Alert(Alert.AlertType.ERROR, "Student not deleted!...").show();
-        }
     }
 
     @FXML
@@ -101,10 +109,33 @@ public class ManageStudentWindowFormController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         getAll();
         generateNextId();
+        setCellValueFactory();
+    }
+
+    private void setCellValueFactory() {
+        colStudentId.setCellValueFactory(new PropertyValueFactory<>("student_id"));
+        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colAdress.setCellValueFactory(new PropertyValueFactory<>("address"));
+        colContact.setCellValueFactory(new PropertyValueFactory<>("contact_no"));
+        colDOB.setCellValueFactory(new PropertyValueFactory<>("dob"));
+        colGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
     }
 
     private void getAll() {
-
+        ObservableList<StudentTM> observableList = FXCollections.observableArrayList();
+        List<StudentDTO> customerDTOList = studentBO.getAllStudent();
+        for (StudentDTO studentDTO : customerDTOList) {
+            observableList.add(new StudentTM(
+                    studentDTO.getStudent_id(),
+                    studentDTO.getName(),
+                    studentDTO.getAddress(),
+                    studentDTO.getContact_no(),
+                    studentDTO.getDate(),
+                    studentDTO.getGender()
+                    )
+            );
+        }
+        studentTbl.setItems(observableList);
     }
 
     private void generateNextId() {

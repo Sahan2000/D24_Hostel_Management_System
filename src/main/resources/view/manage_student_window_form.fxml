@@ -29,14 +29,14 @@
             <Font size="23.0" />
          </font>
       </JFXTextField>
-      <TableView layoutX="465.0" layoutY="208.0" prefHeight="675.0" prefWidth="964.0" style="-fx-border-color: #0C829B;">
+      <TableView fx:id="studentTbl" layoutX="465.0" layoutY="208.0" onMouseClicked="#studentTblOnMouseClicked" prefHeight="675.0" prefWidth="964.0" style="-fx-border-color: #0C829B;">
         <columns>
-          <TableColumn prefWidth="134.66668701171875" text="Student ID" />
-          <TableColumn prefWidth="175.66668701171875" text="Name" />
-            <TableColumn prefWidth="218.33331298828125" text="Address" />
-            <TableColumn prefWidth="138.0" text="Contact" />
-            <TableColumn prefWidth="159.333251953125" text="DOB" />
-            <TableColumn prefWidth="134.0" text="Gender" />
+          <TableColumn fx:id="colStudentId" prefWidth="134.66668701171875" text="Student ID" />
+          <TableColumn fx:id="colName" prefWidth="175.66668701171875" text="Name" />
+            <TableColumn fx:id="colAdress" prefWidth="218.33331298828125" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="138.0" text="Contact" />
+            <TableColumn fx:id="colDOB" prefWidth="159.333251953125" text="DOB" />
+            <TableColumn fx:id="colGender" prefWidth="134.0" text="Gender" />
         </columns>
       </TableView>
       <Label layoutX="64.0" layoutY="275.0" text="Name :" textFill="#0c829b">

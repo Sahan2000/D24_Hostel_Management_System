@@ -8,6 +8,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+import java.util.List;
+
 public class StudentDAOImpl implements StudentDAO {
     @Override
     public String generateNextId() {
@@ -49,5 +51,17 @@ public class StudentDAOImpl implements StudentDAO {
         session.close();
 
         return true;
+    }
+
+    @Override
+    public List<Student> getAll() {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        List<Student> studentArrayList = session.createNativeQuery("SELECT * FROM Student").addEntity(Student.class).list();
+
+        transaction.commit();
+        session.close();
+        return studentArrayList;
     }
 }
