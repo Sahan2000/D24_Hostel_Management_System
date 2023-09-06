@@ -90,7 +90,7 @@
             <Font size="23.0" />
          </font>
       </RadioButton>
-      <JFXButton layoutX="142.0" layoutY="859.0" onAction="#saveBtnOnAction" opacity="0.85" prefHeight="29.0" prefWidth="84.0" style="-fx-background-color: #0C829B;" text="Save" textFill="WHITE">
+      <JFXButton fx:id="saveBtn" layoutX="142.0" layoutY="859.0" onAction="#saveBtnOnAction" opacity="0.85" prefHeight="29.0" prefWidth="84.0" style="-fx-background-color: #0C829B;" text="Save" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
@@ -100,7 +100,7 @@
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <JFXTextField focusColor="#0c829b" layoutX="953.0" layoutY="113.0" prefHeight="47.0" prefWidth="338.0" promptText="Search here" unFocusColor="#0c829b">
+      <JFXTextField fx:id="txtSearch" focusColor="#0c829b" layoutX="953.0" layoutY="113.0" prefHeight="47.0" prefWidth="338.0" promptText="Search here" unFocusColor="#0c829b">
          <font>
             <Font size="23.0" />
          </font>
