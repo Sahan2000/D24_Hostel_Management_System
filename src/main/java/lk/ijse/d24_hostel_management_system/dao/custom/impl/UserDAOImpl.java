@@ -61,12 +61,18 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public boolean delete(Student student) {
+    public boolean delete(Student entity) {
         return false;
     }
+
 
     @Override
     public List<Student> getAll() {
         return null;
+    }
+
+    @Override
+    public boolean update(User entity) {
+        return false;
     }
 }

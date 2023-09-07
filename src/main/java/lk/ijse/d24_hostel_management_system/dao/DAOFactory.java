@@ -13,7 +13,7 @@ public class DAOFactory {
     }
 
     public enum DAOTypes{
-        USER,STUDENT
+        USER,STUDENT,ROOM
     }
 
     public SuperDAO getDAO(DAOTypes daoTypes){

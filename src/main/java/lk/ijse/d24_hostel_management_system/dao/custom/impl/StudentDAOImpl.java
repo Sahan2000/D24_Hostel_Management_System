@@ -31,22 +31,22 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public boolean save(Student user) {
+    public boolean save(Student entity) {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
-        session.persist(user);
+        session.persist(entity);
         transaction.commit();
         session.close();
         return true;
     }
 
     @Override
-    public boolean delete(Student student) {
+    public boolean delete(Student entity) {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
-        session.remove(student);
+        session.remove(entity);
         transaction.commit();
         session.close();
 
@@ -63,6 +63,18 @@ public class StudentDAOImpl implements StudentDAO {
         transaction.commit();
         session.close();
         return studentArrayList;
+    }
+
+    @Override
+    public boolean update(Student entity) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.update(entity);
+        transaction.commit();
+        session.close();
+
+        return true;
     }
 
     @Override

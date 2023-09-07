@@ -8,9 +8,11 @@ import java.util.List;
 public interface CrudDAO <T> extends SuperDAO{
     String generateNextId();
 
-    boolean save(T user);
+    boolean save(T entity);
 
-    boolean delete(Student student);
+    boolean delete(Student entity);
 
     List<Student> getAll();
+
+    boolean update(T entity);
 }

@@ -77,11 +77,23 @@ public class ManageStudentWindowFormController implements Initializable {
     @FXML
     private JFXTextField txtSearch;
 
+    @FXML
+    private JFXButton searchBtn;
+
     StudentBO studentBO = (StudentBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.STUDENT);
 
     @FXML
     void deleteBtnOnAction(ActionEvent event) {
-
+        StudentTM selectedItem = studentTbl.getSelectionModel().getSelectedItem();
+        if (selectedItem != null){
+            boolean isDeleted = studentBO.deleteStudent(selectedItem.getStudent_id());
+            if (isDeleted) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Student deleted!...").show();
+                getAll();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Student not deleted   !...").show();
+            }
+        }
     }
 
     @FXML
@@ -93,12 +105,22 @@ public class ManageStudentWindowFormController implements Initializable {
         studentDTO.setContact_no(txtContact.getText());
         studentDTO.setDate(Date.valueOf(dob.getValue()));
         studentDTO.setGender((maleBtn.isSelected()) ? "Male" : "Female");
-
-        boolean isSaved = studentBO.saveStudent(studentDTO);
-        if (isSaved){
-            new Alert(Alert.AlertType.CONFIRMATION, "Student saved!...").show();
-        }else {
-            new Alert(Alert.AlertType.ERROR, "Student not saved!...").show();
+        if (saveBtn.getText().equals("Save")) {
+            boolean isSaved = studentBO.saveStudent(studentDTO);
+            if (isSaved) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Student saved!...").show();
+                getAll();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Student not saved!...").show();
+            }
+        } else if(saveBtn.getText().equals("Update")) {
+            boolean isUpdated = studentBO.updateStudent(studentDTO);
+            if (isUpdated) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Student updated!...").show();
+                getAll();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Student not updated!...").show();
+            }
         }
     }
 
@@ -128,8 +150,6 @@ public class ManageStudentWindowFormController implements Initializable {
         generateNextId();
         setCellValueFactory();
         deleteBtn.setDisable(true);
-
-
     }
 
     private StudentTM toStudentTm(StudentDTO studentDto) {
@@ -197,12 +217,22 @@ public class ManageStudentWindowFormController implements Initializable {
                 }
                 txtContact.setText(selectedItem.getContact_no());
                 dob.setValue(selectedItem.getDob().toLocalDate());
-            } else {
-                saveBtn.setDisable(true);
+                saveBtn.setText("Update");
+                saveBtn.setStyle("-fx-background-color: #1A5D1A");
             }
+
         } catch (RuntimeException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
     }
 
+    @FXML
+    void txtSearchOnAction(ActionEvent event) {
+        searchBtn.fire();
+    }
+
+    @FXML
+    void searchBtnOnAction(ActionEvent event) {
+
+    }
 }

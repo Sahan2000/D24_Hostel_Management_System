@@ -11,9 +11,11 @@ public interface StudentBO extends SuperBO {
 
     boolean saveStudent(StudentDTO studentDTO);
 
-    boolean deleteStudent(StudentDTO studentDTO);
+    boolean deleteStudent(String id);
 
     List<StudentDTO> getAllStudent();
 
     Arrays searchStudentByText(String text);
+
+    boolean updateStudent(StudentDTO studentDTO);
 }

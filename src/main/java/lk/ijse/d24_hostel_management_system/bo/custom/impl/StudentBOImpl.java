@@ -28,8 +28,10 @@ public class StudentBOImpl implements StudentBO {
     }
 
     @Override
-    public boolean deleteStudent(StudentDTO studentDTO) {
-        return studentDAO.delete(new Student(studentDTO.getStudent_id(),studentDTO.getName(),studentDTO.getAddress(),studentDTO.getContact_no(),studentDTO.getDate(),studentDTO.getGender()));
+    public boolean deleteStudent(String id) {
+        Student student = new Student();
+        student.setStudent_id(id);
+        return studentDAO.delete(student);
     }
 
     @Override
@@ -52,5 +54,10 @@ public class StudentBOImpl implements StudentBO {
             }
             throw new RuntimeException("No any match found");
         }
+    }
+
+    @Override
+    public boolean updateStudent(StudentDTO studentDTO) {
+        return studentDAO.update(new Student(studentDTO.getStudent_id(), studentDTO.getName(), studentDTO.getAddress(), studentDTO.getContact_no(), studentDTO.getDate(),  studentDTO.getGender()));
     }
 }

@@ -90,7 +90,7 @@
             <Font size="23.0" />
          </font>
       </RadioButton>
-      <JFXButton fx:id="saveBtn" layoutX="142.0" layoutY="859.0" onAction="#saveBtnOnAction" opacity="0.85" prefHeight="29.0" prefWidth="84.0" style="-fx-background-color: #0C829B;" text="Save" textFill="WHITE">
+      <JFXButton fx:id="saveBtn" layoutX="118.0" layoutY="859.0" onAction="#saveBtnOnAction" opacity="0.85" prefHeight="33.0" prefWidth="108.0" style="-fx-background-color: #0C829B;" text="Save" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
@@ -100,12 +100,12 @@
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <JFXTextField fx:id="txtSearch" focusColor="#0c829b" layoutX="953.0" layoutY="113.0" prefHeight="47.0" prefWidth="338.0" promptText="Search here" unFocusColor="#0c829b">
+      <JFXTextField fx:id="txtSearch" focusColor="#0c829b" layoutX="953.0" layoutY="113.0" onAction="#txtSearchOnAction" prefHeight="47.0" prefWidth="338.0" promptText="Search here" unFocusColor="#0c829b">
          <font>
             <Font size="23.0" />
          </font>
       </JFXTextField>
-      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="1292.0" layoutY="118.0" prefHeight="43.0" prefWidth="53.0">
+      <JFXButton fx:id="searchBtn" contentDisplay="GRAPHIC_ONLY" layoutX="1292.0" layoutY="118.0" onAction="#searchBtnOnAction" prefHeight="43.0" prefWidth="53.0">
          <graphic>
             <ImageView fitHeight="34.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                <image>
