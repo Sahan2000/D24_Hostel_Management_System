@@ -7,8 +7,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -16,6 +18,7 @@ import javafx.stage.Stage;
 import lk.ijse.d24_hostel_management_system.bo.BOFactory;
 import lk.ijse.d24_hostel_management_system.bo.custom.UserBO;
 import lk.ijse.d24_hostel_management_system.entity.User;
+import org.hibernate.boot.model.source.spi.SingularAttributeSourceAny;
 
 import java.io.IOException;
 import java.net.URL;
@@ -43,6 +46,20 @@ public class LoginPageFormController implements Initializable {
     private JFXTextField txtPassword;
 
     UserBO userBO = (UserBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.USER);
+
+    @FXML
+    private Label forgetPassword;
+
+    @FXML
+    void forgetPasswordOnMouseClicked(MouseEvent event) throws IOException {
+        Parent load = FXMLLoader.load(getClass().getResource("/view/forgotPassword_form.fxml"));
+        Stage stage = new Stage();
+        stage.setScene(new Scene(load));
+        stage.centerOnScreen();
+        stage.setTitle("Forgot password");
+        stage.show();
+    }
+
 
     @FXML
     void hidePasswordOnMouseClicked(MouseEvent event) {

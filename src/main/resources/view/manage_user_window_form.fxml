@@ -89,7 +89,7 @@
             <TableColumn fx:id="colEmail" prefWidth="253.0" text="Email" />
          </columns>
       </TableView>
-      <JFXButton fx:id="saveBtn" layoutX="152.0" layoutY="769.0" onAction="#saveBtnOnAction" opacity="0.85" prefHeight="29.0" prefWidth="84.0" style="-fx-background-color: #0C829B;" text="Save" textFill="WHITE">
+      <JFXButton fx:id="saveBtn" layoutX="130.0" layoutY="769.0" onAction="#saveBtnOnAction" opacity="0.85" prefHeight="33.0" prefWidth="106.0" style="-fx-background-color: #0C829B;" text="Save" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>

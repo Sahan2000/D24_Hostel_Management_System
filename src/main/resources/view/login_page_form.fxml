@@ -65,7 +65,7 @@
             <Image url="@../images/icons8-hide-password-90.png" />
          </image>
       </ImageView>
-      <Label layoutX="717.0" layoutY="338.0" text="Forgot Password" underline="true" />
+      <Label fx:id="forgetPassword" layoutX="717.0" layoutY="338.0" onMouseClicked="#forgetPasswordOnMouseClicked" text="Forgot Password" underline="true" />
       <Label layoutX="600.0" layoutY="462.0" text="Don't have an account ?" />
       <Label layoutX="765.0" layoutY="459.0" onMouseClicked="#signUpOnMouseClicked" text="Sign up" textFill="#bc0701" underline="true">
          <font>
