@@ -1,5 +1,6 @@
 package lk.ijse.d24_hostel_management_system.dao;
 
+import lk.ijse.d24_hostel_management_system.dao.custom.impl.RoomDAOImpl;
 import lk.ijse.d24_hostel_management_system.dao.custom.impl.StudentDAOImpl;
 import lk.ijse.d24_hostel_management_system.dao.custom.impl.UserDAOImpl;
 
@@ -22,6 +23,8 @@ public class DAOFactory {
                 return new UserDAOImpl();
             case STUDENT:
                 return new StudentDAOImpl();
+            case ROOM:
+                return new RoomDAOImpl();
             default:
                 return null;
         }

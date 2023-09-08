@@ -11,12 +11,16 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import lk.ijse.d24_hostel_management_system.bo.BOFactory;
 import lk.ijse.d24_hostel_management_system.bo.custom.RoomBO;
 import lk.ijse.d24_hostel_management_system.dto.RoomDTO;
+import lk.ijse.d24_hostel_management_system.tm.RoomTM;
+import lk.ijse.d24_hostel_management_system.tm.StudentTM;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ManageRoomsWindowFormController implements Initializable {
@@ -39,7 +43,7 @@ public class ManageRoomsWindowFormController implements Initializable {
     private JFXButton deleteBtn;
 
     @FXML
-    private TableView<?> roomTble;
+    private TableView<RoomTM> roomTble;
 
     @FXML
     private TableColumn<?, ?> colId;
@@ -57,12 +61,35 @@ public class ManageRoomsWindowFormController implements Initializable {
 
     @FXML
     void deleteBtnOnAction(ActionEvent event) {
-
+        RoomTM selectedItem = roomTble.getSelectionModel().getSelectedItem();
+        if (selectedItem != null){
+            boolean isDeleted = roomBO.deleteRoom(selectedItem.getRoom_type_id());
+            if (isDeleted) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Room deleted!...").show();
+                getAll();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Room not deleted   !...").show();
+            }
+        }
     }
 
     @FXML
     void roomTbleOnMouseClicked(MouseEvent event) {
+        RoomTM selectedItem = roomTble.getSelectionModel().getSelectedItem();
+        try {
+            if (selectedItem != null) {
+                deleteBtn.setDisable(false);
+                txtId.setText(selectedItem.getRoom_type_id());
+                cmbType.setValue(selectedItem.getType());
+                txtKeyMoney.setText(String.valueOf(selectedItem.getKey_money()));
+                txtQty.setText(String.valueOf(selectedItem.getQty()));
+                saveBtn.setText("Update");
+                saveBtn.setStyle("-fx-background-color: #1A5D1A");
+            }
 
+        } catch (RuntimeException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
     }
 
     @FXML
@@ -92,6 +119,18 @@ public class ManageRoomsWindowFormController implements Initializable {
     }
 
     private void getAll() {
+        ObservableList<RoomTM> observableList = FXCollections.observableArrayList();
+        List<RoomDTO> roomDTOList = roomBO.getAllRooms();
+        for (RoomDTO roomDTO : roomDTOList) {
+            observableList.add(new RoomTM(
+                            roomDTO.getRoom_type_id(),
+                            roomDTO.getType(),
+                            roomDTO.getKey_money(),
+                            roomDTO.getQty()
+                    )
+            );
+        }
+        roomTble.setItems(observableList);
     }
 
     @FXML
@@ -112,13 +151,28 @@ public class ManageRoomsWindowFormController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         loadRoomType();
+        getAll();
+        setCellValueFactory();
+        generateNextRoomId();
     }
 
+    private void generateNextRoomId() {
+        String nextId = roomBO.generatenextRoomId();
+        txtId.setText(nextId);
+    }
 
+    private void setCellValueFactory() {
+        colId.setCellValueFactory(new PropertyValueFactory<>("room_type_id"));
+        colType.setCellValueFactory(new PropertyValueFactory<>("type"));
+        colKeyMoney.setCellValueFactory(new PropertyValueFactory<>("key_money"));
+        colQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+    }
     private void loadRoomType() {
         ObservableList<String> options = FXCollections.observableArrayList(
-                "AC Room",
-                "Non-AC Room"
+                "AC",
+                "Non-AC",
+                "AC / Food",
+                "Non-Ac/ Food"
         );
         cmbType.setItems(options);
     }

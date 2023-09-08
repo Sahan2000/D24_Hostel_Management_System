@@ -13,7 +13,21 @@ import java.util.List;
 public class RoomDAOImpl implements RoomDAO {
     @Override
     public String generateNextId() {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query<String> query =  session.createNamedQuery("Room.findLatestRoomId", String.class);
+        query.setMaxResults(1);
+        String latestUserId = query.uniqueResult();
+
+        if (latestUserId != null){
+            transaction.commit();
+            session.close();
+            int newUserID = Integer.parseInt(latestUserId.replace("RM-", "")) + 1;
+            return String.format("RM-%04d", newUserID);
+        }else {
+            return "RM-001";
+        }
     }
 
     @Override
@@ -28,13 +42,27 @@ public class RoomDAOImpl implements RoomDAO {
     }
 
     @Override
-    public boolean delete(Student entity) {
-        return false;
+    public boolean delete(Room entity) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.remove(entity);
+        transaction.commit();
+        session.close();
+
+        return true;
     }
 
     @Override
-    public List<Student> getAll() {
-        return null;
+    public List<Room> getAll() {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        List<Room> studentArrayList = session.createNativeQuery("SELECT * FROM Room").addEntity(Room.class).list();
+
+        transaction.commit();
+        session.close();
+        return studentArrayList;
     }
 
     @Override

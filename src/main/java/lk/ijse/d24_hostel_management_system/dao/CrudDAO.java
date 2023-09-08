@@ -10,9 +10,9 @@ public interface CrudDAO <T> extends SuperDAO{
 
     boolean save(T entity);
 
-    boolean delete(Student entity);
+    boolean delete(T entity);
 
-    List<Student> getAll();
+    List<T> getAll();
 
     boolean update(T entity);
 }

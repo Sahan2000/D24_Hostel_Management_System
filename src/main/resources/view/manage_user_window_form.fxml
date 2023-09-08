@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="1000.0" prefWidth="1523.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24_hostel_management_system.controller.ManageUserWindowFormController">
    <children>
-      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="1361.0" layoutY="107.0" prefHeight="26.0" prefWidth="37.0" text=".">
+      <JFXButton fx:id="searchBtn" contentDisplay="GRAPHIC_ONLY" layoutX="1361.0" layoutY="107.0" onAction="#searchBtnOnAction" prefHeight="26.0" prefWidth="37.0" text=".">
          <graphic>
             <ImageView fitHeight="24.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -35,7 +35,7 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="#0c829b" layoutX="76.0" layoutY="213.0" promptText="U-0001" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+      <JFXTextField fx:id="txtId" focusColor="#0c829b" layoutX="76.0" layoutY="213.0" onAction="#txtIdOnAction" promptText="U-0001" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
          <font>
             <Font size="23.0" />
          </font>
@@ -45,7 +45,7 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="#0c829b" layoutX="76.0" layoutY="323.0" promptText="Sahan01" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+      <JFXTextField fx:id="txtName" focusColor="#0c829b" layoutX="76.0" layoutY="323.0" onAction="#txtNameOnAction" promptText="Sahan01" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
          <font>
             <Font size="23.0" />
          </font>
@@ -55,7 +55,7 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="#0c829b" layoutX="76.0" layoutY="433.0" promptText="*******" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+      <JFXTextField fx:id="txtPassword" focusColor="#0c829b" layoutX="76.0" layoutY="433.0" onAction="#txtPasswordOnAction" promptText="*******" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
          <font>
             <Font size="23.0" />
          </font>
@@ -65,7 +65,7 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="#0c829b" layoutX="76.0" layoutY="543.0" promptText="s@2" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+      <JFXTextField fx:id="txtPasswordHint" focusColor="#0c829b" layoutX="76.0" layoutY="543.0" onAction="#txtPasswordHintOnAction" promptText="s@2" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
          <font>
             <Font size="23.0" />
          </font>
@@ -75,31 +75,31 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="#0c829b" layoutX="76.0" layoutY="653.0" promptText="example20@gmail.com" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+      <JFXTextField fx:id="txtEmail" focusColor="#0c829b" layoutX="76.0" layoutY="653.0" onAction="#txtEmailOnAction" promptText="example20@gmail.com" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
          <font>
             <Font size="23.0" />
          </font>
       </JFXTextField>
-      <TableView layoutX="475.0" layoutY="188.0" prefHeight="675.0" prefWidth="964.0" style="-fx-border-color: #0C829B;">
+      <TableView fx:id="userTbl" layoutX="475.0" layoutY="188.0" onMouseClicked="#userTblOnMouseClicked" prefHeight="675.0" prefWidth="964.0" style="-fx-border-color: #0C829B;">
          <columns>
-            <TableColumn prefWidth="134.66668701171875" text="User ID" />
-            <TableColumn prefWidth="175.66668701171875" text="User Name" />
-            <TableColumn prefWidth="184.0" text="Password" />
-            <TableColumn prefWidth="214.0" text="Password Hint" />
-            <TableColumn prefWidth="253.0" text="Email" />
+            <TableColumn fx:id="colId" prefWidth="134.66668701171875" text="User ID" />
+            <TableColumn fx:id="colName" prefWidth="175.66668701171875" text="User Name" />
+            <TableColumn fx:id="colPassword" prefWidth="184.0" text="Password" />
+            <TableColumn fx:id="colPasswordHint" prefWidth="214.0" text="Password Hint" />
+            <TableColumn fx:id="colEmail" prefWidth="253.0" text="Email" />
          </columns>
       </TableView>
-      <JFXButton layoutX="152.0" layoutY="769.0" opacity="0.85" prefHeight="29.0" prefWidth="84.0" style="-fx-background-color: #0C829B;" text="Save" textFill="WHITE">
+      <JFXButton fx:id="saveBtn" layoutX="152.0" layoutY="769.0" onAction="#saveBtnOnAction" opacity="0.85" prefHeight="29.0" prefWidth="84.0" style="-fx-background-color: #0C829B;" text="Save" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="266.0" layoutY="769.0" opacity="0.64" style="-fx-background-color: red mat;" text="Delete" textFill="WHITE">
+      <JFXButton fx:id="deleteBtn" layoutX="266.0" layoutY="769.0" onAction="#deleteBtnOnAction" opacity="0.64" style="-fx-background-color: red mat;" text="Delete" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <JFXTextField focusColor="#0c829b" layoutX="1023.0" layoutY="93.0" prefHeight="47.0" prefWidth="338.0" promptText="Search here" unFocusColor="#0c829b">
+      <JFXTextField fx:id="txtSearch" focusColor="#0c829b" layoutX="1023.0" layoutY="93.0" onAction="#txtSearchOnAction" prefHeight="47.0" prefWidth="338.0" promptText="Search here" unFocusColor="#0c829b">
          <font>
             <Font size="23.0" />
          </font>

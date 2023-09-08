@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="613.0" prefWidth="353.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24_hostel_management_system.controller.RegisterrationFormController">
    <children>
-      <Label layoutX="79.0" layoutY="11.0" opacity="0.68" text="Reister as a user">
+      <Label layoutX="72.0" layoutY="11.0" opacity="0.68" text="Register as a user">
          <font>
             <Font size="24.0" />
          </font>
