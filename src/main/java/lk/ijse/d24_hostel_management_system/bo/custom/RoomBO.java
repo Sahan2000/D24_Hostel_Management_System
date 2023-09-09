@@ -6,6 +6,10 @@ import lk.ijse.d24_hostel_management_system.dto.RoomDTO;
 import java.util.List;
 
 public interface RoomBO extends SuperBO {
+
+
+    List<String> getCodes();
+
     boolean saveRooms(RoomDTO roomDTO);
 
     boolean updateRooms(RoomDTO roomDTO);
@@ -15,4 +19,6 @@ public interface RoomBO extends SuperBO {
     boolean deleteRoom(String roomTypeId);
 
     String generatenextRoomId();
+
+    RoomDTO searchByRoomTypeId(String selectedItem);
 }

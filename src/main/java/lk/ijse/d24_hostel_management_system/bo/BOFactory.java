@@ -1,5 +1,6 @@
 package lk.ijse.d24_hostel_management_system.bo;
 
+import lk.ijse.d24_hostel_management_system.bo.custom.impl.ReservationBOImpl;
 import lk.ijse.d24_hostel_management_system.bo.custom.impl.RoomBOImpl;
 import lk.ijse.d24_hostel_management_system.bo.custom.impl.StudentBOImpl;
 import lk.ijse.d24_hostel_management_system.bo.custom.impl.UserBOImpl;
@@ -16,7 +17,7 @@ public class BOFactory {
     }
 
     public enum BOTypes{
-        USER,STUDENT,ROOM
+        USER,STUDENT,ROOM,RESERVATION
     }
 
     public SuperBO getBO(BOTypes boTypes){
@@ -27,6 +28,8 @@ public class BOFactory {
                 return new StudentBOImpl();
             case ROOM:
                 return new RoomBOImpl();
+            case RESERVATION:
+                return new ReservationBOImpl();
             default:
                 return null;
         }

@@ -5,7 +5,9 @@ import lk.ijse.d24_hostel_management_system.bo.custom.StudentBO;
 import lk.ijse.d24_hostel_management_system.bo.util.Converter;
 import lk.ijse.d24_hostel_management_system.dao.DAOFactory;
 import lk.ijse.d24_hostel_management_system.dao.custom.StudentDAO;
+import lk.ijse.d24_hostel_management_system.dto.RoomDTO;
 import lk.ijse.d24_hostel_management_system.dto.StudentDTO;
+import lk.ijse.d24_hostel_management_system.entity.Room;
 import lk.ijse.d24_hostel_management_system.entity.Student;
 import lk.ijse.d24_hostel_management_system.util.FactoryConfiguration;
 import org.hibernate.Session;
@@ -59,5 +61,29 @@ public class StudentBOImpl implements StudentBO {
     @Override
     public boolean updateStudent(StudentDTO studentDTO) {
         return studentDAO.update(new Student(studentDTO.getStudent_id(), studentDTO.getName(), studentDTO.getAddress(), studentDTO.getContact_no(), studentDTO.getDate(),  studentDTO.getGender()));
+    }
+
+    @Override
+    public List<String> getCodes() {
+        List<Student> reservations = studentDAO.getAll();
+        List<String> studentsId = new ArrayList<>();
+        for (Student student: reservations) {
+            studentsId.add(student.getStudent_id());
+        }
+        return studentsId;
+    }
+
+    @Override
+    public StudentDTO searchbyStudentId(String value) {
+        Student entity = studentDAO.search(value);
+        StudentDTO studentDTO = new StudentDTO();
+        studentDTO.setStudent_id(entity.getStudent_id());
+        studentDTO.setName(entity.getName());
+        studentDTO.setAddress(entity.getAddress());
+        studentDTO.setContact_no(entity.getContact_no());
+        studentDTO.setDate(entity.getDate());
+        studentDTO.setGender(entity.getGender());
+
+        return studentDTO;
     }
 }

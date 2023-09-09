@@ -5,17 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b988079-10ce-4c7b-ac53-4ac3cf59f871" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/tm/UserTM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/ReservationBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/ReservationBOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/AddNewReservationWindowFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/ReservationDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/ReservationDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/add_new_reservation_window_form.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/UserBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/UserBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/UserBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/UserBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/ForgotPasswordFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/ForgotPasswordFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/LoginPageFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/LoginPageFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/ManageUserWindowFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/ManageUserWindowFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/BOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/BOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/RoomBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/RoomBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/StudentBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/StudentBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/RoomBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/RoomBOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/StudentBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/StudentBOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/DashboardWindowFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/DashboardWindowFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/ReservationWindowFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/ReservationWindowFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/CrudDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/CrudDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/DAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/RoomDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/RoomDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/StudentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/StudentDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/forgotPassword_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/forgotPassword_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login_page_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login_page_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/manage_user_window_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/manage_user_window_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/entity/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/entity/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard_window_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard_window_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/reservation_window_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/reservation_window_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +38,9 @@
       <list>
         <option value="Less File" />
         <option value="CSS File" />
+        <option value="FxmlFile" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -115,6 +126,7 @@
       <workItem from="1694102828850" duration="7520000" />
       <workItem from="1694113402374" duration="20000" />
       <workItem from="1694148414887" duration="5037000" />
+      <workItem from="1694190507880" duration="10514000" />
     </task>
     <servers />
   </component>

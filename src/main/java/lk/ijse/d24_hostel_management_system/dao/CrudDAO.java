@@ -1,5 +1,6 @@
 package lk.ijse.d24_hostel_management_system.dao;
 
+import lk.ijse.d24_hostel_management_system.entity.Room;
 import lk.ijse.d24_hostel_management_system.entity.Student;
 import lk.ijse.d24_hostel_management_system.entity.User;
 
@@ -15,4 +16,6 @@ public interface CrudDAO <T> extends SuperDAO{
     List<T> getAll();
 
     boolean update(T entity);
+
+    T search(String selectedItem);
 }

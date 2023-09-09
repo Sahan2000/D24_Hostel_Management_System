@@ -18,6 +18,16 @@ public class RoomBOImpl implements RoomBO {
     RoomDAO roomDAO = (RoomDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.ROOM);
 
     @Override
+    public List<String> getCodes() {
+        List<Room> reservations = roomDAO.getAll();
+        List<String> studentsId = new ArrayList<>();
+        for (Room student: reservations) {
+            studentsId.add(student.getRoom_type_id());
+        }
+        return studentsId;
+    }
+
+    @Override
     public boolean saveRooms(RoomDTO roomDTO) {
         Room room = new Room();
         room.setRoom_type_id(roomDTO.getRoom_type_id());
@@ -69,5 +79,17 @@ public class RoomBOImpl implements RoomBO {
     public String generatenextRoomId() {
         return roomDAO.generateNextId();
 
+    }
+
+    @Override
+    public RoomDTO searchByRoomTypeId(String selectedItem) {
+        Room entity = roomDAO.search(selectedItem);
+        RoomDTO roomDTO = new RoomDTO();
+        roomDTO.setRoom_type_id(entity.getRoom_type_id());
+        roomDTO.setType(entity.getType());
+        roomDTO.setKey_money(entity.getKey_money());
+        roomDTO.setQty(entity.getQty());
+
+        return roomDTO;
     }
 }

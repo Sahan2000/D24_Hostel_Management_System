@@ -75,4 +75,17 @@ public class RoomDAOImpl implements RoomDAO {
         session.close();
         return true;
     }
+
+    @Override
+    public Room search(String selectedItem) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Room room =  session.get(Room.class,selectedItem);
+
+        transaction.commit();
+        session.close();
+
+        return room;
+    }
 }

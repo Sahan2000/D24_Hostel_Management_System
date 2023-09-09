@@ -12,6 +12,11 @@ import java.sql.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+
+@NamedQuery(
+        name = "Reservation.findLatestReservationId",
+        query = "SELECT r.res_id FROM Reservation r ORDER BY r.res_id DESC"
+)
 public class Reservation {
     @Id
     private String res_id;

@@ -18,4 +18,8 @@ public interface StudentBO extends SuperBO {
     Arrays searchStudentByText(String text);
 
     boolean updateStudent(StudentDTO studentDTO);
+
+    List<String> getCodes();
+
+    StudentDTO searchbyStudentId(String value);
 }

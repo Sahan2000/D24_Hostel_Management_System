@@ -16,22 +16,22 @@
                   <Image url="@../images/imageedit_3_5124577943.gif" />
                </image>
             </ImageView>
-            <JFXButton fx:id="dashboardBtn" layoutX="54.0" layoutY="362.0" onAction="#dashboardBtnOnAction" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="DashBboard" textFill="WHITE">
+            <JFXButton fx:id="dashboardBtn" layoutX="54.0" layoutY="342.0" onAction="#dashboardBtnOnAction" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="DashBboard" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="manageStudentBtn" layoutX="54.0" layoutY="480.0" onAction="#manageStudentOnAction" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="Manage Students" textFill="WHITE">
+            <JFXButton fx:id="manageStudentBtn" layoutX="54.0" layoutY="440.0" onAction="#manageStudentOnAction" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="Manage Students" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="manageRoomsBtn" layoutX="54.0" layoutY="600.0" onAction="#manageRoomsBtnOnAtion" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="Manage Rooms" textFill="WHITE">
+            <JFXButton fx:id="manageRoomsBtn" layoutX="54.0" layoutY="540.0" onAction="#manageRoomsBtnOnAtion" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="Manage Rooms" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="manageUsersBtn" layoutX="54.0" layoutY="722.0" onAction="#manageUsersBtnOnAction" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="Manage Users" textFill="WHITE">
+            <JFXButton fx:id="manageUsersBtn" layoutX="54.0" layoutY="752.0" onAction="#manageUsersBtnOnAction" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="Manage Users" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
@@ -56,6 +56,11 @@
                </graphic>
                <font>
                   <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="reservationBtn" layoutX="54.0" layoutY="642.0" onAction="#reservationBtnOnAction" prefHeight="50.0" prefWidth="289.0" styleClass="calendar" stylesheets="@../styles/dashboardBtn.css" text="Manage Reservation" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
                </font>
             </JFXButton>
          </children>

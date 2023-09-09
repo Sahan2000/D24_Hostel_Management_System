@@ -34,6 +34,14 @@ public class DashboardWindowFormController implements Initializable {
     @FXML
     private AnchorPane root;
 
+    @FXML
+    private JFXButton reservationBtn;
+
+    @FXML
+    void reservationBtnOnAction(ActionEvent event) throws IOException {
+        setForms("/view/reservation_window_form.fxml");
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -70,9 +78,9 @@ public class DashboardWindowFormController implements Initializable {
 
     private void setForms(String forms) throws IOException {
 
-        String[] formArrays = {"/view/manage_student_window_form.fxml","/view/manage_user_window_form.fxml", "/view/dashboard_icon_form.fxml", "/view/manage_rooms_window_form.fxml"};
+        String[] formArrays = {"/view/manage_student_window_form.fxml","/view/manage_user_window_form.fxml", "/view/dashboard_icon_form.fxml", "/view/manage_rooms_window_form.fxml", "/view/reservation_window_form.fxml"};
 
-        JFXButton[] btnArray = {manageStudentBtn,manageUsersBtn,dashboardBtn,manageRoomsBtn};
+        JFXButton[] btnArray = {manageStudentBtn,manageUsersBtn,dashboardBtn,manageRoomsBtn,reservationBtn};
 
         AnchorPane load = FXMLLoader.load(getClass().getResource(forms));
         root.getChildren().clear();
@@ -82,7 +90,7 @@ public class DashboardWindowFormController implements Initializable {
             btnArray[i].setStyle("-fx-background-color: #0C829B;");
 
             if (forms.equals(formArrays[i])){
-                btnArray[i].setStyle("-fx-background-color:  #D3D3D3;");
+                btnArray[i].setStyle("-fx-background-color:  #D3D3D3; -fx-text-fill: black");
             }
         }
     }

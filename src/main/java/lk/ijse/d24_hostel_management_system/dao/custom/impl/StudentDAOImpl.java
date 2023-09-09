@@ -1,6 +1,7 @@
 package lk.ijse.d24_hostel_management_system.dao.custom.impl;
 
 import lk.ijse.d24_hostel_management_system.dao.custom.StudentDAO;
+import lk.ijse.d24_hostel_management_system.entity.Room;
 import lk.ijse.d24_hostel_management_system.entity.Student;
 import lk.ijse.d24_hostel_management_system.entity.User;
 import lk.ijse.d24_hostel_management_system.util.FactoryConfiguration;
@@ -75,6 +76,19 @@ public class StudentDAOImpl implements StudentDAO {
         session.close();
 
         return true;
+    }
+
+    @Override
+    public Student search(String selectedItem) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Student student =  session.get(Student.class,selectedItem);
+
+        transaction.commit();
+        session.close();
+
+        return student;
     }
 
     @Override
