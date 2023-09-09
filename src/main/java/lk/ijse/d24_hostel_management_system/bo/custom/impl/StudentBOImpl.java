@@ -4,6 +4,7 @@ import com.sun.javafx.scene.layout.region.Margins;
 import lk.ijse.d24_hostel_management_system.bo.custom.StudentBO;
 import lk.ijse.d24_hostel_management_system.bo.util.Converter;
 import lk.ijse.d24_hostel_management_system.dao.DAOFactory;
+import lk.ijse.d24_hostel_management_system.dao.custom.QueryDAO;
 import lk.ijse.d24_hostel_management_system.dao.custom.StudentDAO;
 import lk.ijse.d24_hostel_management_system.dto.RoomDTO;
 import lk.ijse.d24_hostel_management_system.dto.StudentDTO;
@@ -18,6 +19,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class StudentBOImpl implements StudentBO {
+
+    QueryDAO queryDAO = (QueryDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.QUERY);
     StudentDAO studentDAO = (StudentDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.STUDENT);
     @Override
     public String generatenextStudentId() {
@@ -85,5 +88,23 @@ public class StudentBOImpl implements StudentBO {
         studentDTO.setGender(entity.getGender());
 
         return studentDTO;
+    }
+
+    @Override
+    public List<StudentDTO> getUnpaidStudents() {
+        List<Student> unpaidStudents = queryDAO.getUnpaidStudents();
+        List<StudentDTO> studentDTOS = new ArrayList<>();
+        for (Student student :unpaidStudents) {
+            StudentDTO studentDTO = new StudentDTO();
+            studentDTO.setStudent_id(student.getStudent_id());
+            studentDTO.setName(student.getName());
+            studentDTO.setAddress(student.getAddress());
+            studentDTO.setContact_no(student.getContact_no());
+            studentDTO.setDate(student.getDate());
+            studentDTO.setGender(student.getGender());
+
+            studentDTOS.add(studentDTO);
+        }
+        return studentDTOS;
     }
 }

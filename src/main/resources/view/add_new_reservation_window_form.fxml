@@ -37,7 +37,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtAvailableQty" layoutX="60.0" layoutY="378.0" prefHeight="28.0" prefWidth="247.0" style="-fx-border-color: #0c829b;" />
+      <JFXTextField fx:id="txtAvailableQty" editable="false" layoutX="60.0" layoutY="378.0" prefHeight="28.0" prefWidth="247.0" style="-fx-border-color: #0c829b;" />
       <Label layoutX="60.0" layoutY="431.0" text="Booking Date :" textFill="#0c829b">
          <font>
             <Font size="16.0" />
@@ -48,7 +48,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtPricePerRoom" layoutX="60.0" layoutY="538.0" prefHeight="28.0" prefWidth="247.0" style="-fx-border-color: #0c829b;" />
+      <JFXTextField fx:id="txtPricePerRoom" editable="false" layoutX="60.0" layoutY="538.0" prefHeight="28.0" prefWidth="247.0" style="-fx-border-color: #0c829b;" />
       <ComboBox fx:id="cmbStudentId" layoutX="60.0" layoutY="218.0" prefHeight="28.0" prefWidth="247.0" style="-fx-border-color: #0c829b;" />
       <ComboBox fx:id="cmbRoomTypeId" layoutX="60.0" layoutY="298.0" onAction="#cmbRoomTypeIdOnAction" prefHeight="28.0" prefWidth="247.0" style="-fx-border-color: #0c829b;" />
       <ButtonBar layoutX="62.0" layoutY="609.0" prefHeight="45.0" prefWidth="247.0">

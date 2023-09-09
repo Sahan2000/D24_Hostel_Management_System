@@ -11,11 +11,10 @@ import java.sql.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class StudentTM extends ReservationTM {
+public class ReservationTM {
+    private String res_id;
+    private Date date;
+    private String status;
     private String student_id;
-    private String name;
-    private String address;
-    private String contact_no;
-    private Date dob;
-    private String gender;
+    private String room_id;
 }

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="pane" prefHeight="1000.0" prefWidth="1523.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24_hostel_management_system.controller.UnPaidCaseFormController">
+   <children>
+      <Label layoutX="528.0" layoutY="45.0" opacity="0.68" text="View Un-paid Student">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+      </Label>
+      <TableView fx:id="unPaidStudentTbl" layoutX="120.0" layoutY="123.0" prefHeight="750.0" prefWidth="1300.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="254.33334350585938" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="336.33331298828125" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="405.66668701171875" text="Address" />
+            <TableColumn fx:id="colMobile" prefWidth="303.00006103515625" text="Mobile" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="backBtn" layoutX="119.0" layoutY="919.0" onAction="#backBtnOnAction" style="-fx-background-color: #0c829b; -fx-background-radius: 5;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

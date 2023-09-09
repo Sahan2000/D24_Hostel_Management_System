@@ -44,7 +44,13 @@ public class ReservationDAOImpl implements ReservationDAO {
 
     @Override
     public boolean delete(Reservation entity) {
-        return false;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.remove(entity);
+        transaction.commit();
+        session.close();
+        return true;
     }
 
     @Override
@@ -61,11 +67,24 @@ public class ReservationDAOImpl implements ReservationDAO {
 
     @Override
     public boolean update(Reservation entity) {
-        return false;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.update(entity);
+        transaction.commit();
+        session.close();
+
+        return true;
     }
 
     @Override
     public Reservation search(String selectedItem) {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Reservation reservation = session.get(Reservation.class,selectedItem);
+        transaction.commit();
+        session.close();
+        return reservation;
     }
 }
