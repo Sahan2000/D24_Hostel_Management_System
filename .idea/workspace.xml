@@ -5,22 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b988079-10ce-4c7b-ac53-4ac3cf59f871" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/UnPaidCaseFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/QueryDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/QueryDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/tm/ReservationTM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/unPaid_case_form.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/util/RegexPatterns.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/styles/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/47a50712-0486-4ccc-bcd3-0066a8c022e8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/47a50712-0486-4ccc-bcd3-0066a8c022e8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/ReservationBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/ReservationBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/StudentBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/StudentBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/ReservationBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/ReservationBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/StudentBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/StudentBOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/RoomBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/RoomBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/RoomBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/impl/RoomBOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/DashboardIconFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/DashboardIconFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/DashboardWindowFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/DashboardWindowFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/ManageRoomsWindowFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/ManageRoomsWindowFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/ReservationWindowFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/controller/ReservationWindowFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/DAOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/ReservationDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/ReservationDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/tm/StudentTM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/tm/StudentTM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/add_new_reservation_window_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/add_new_reservation_window_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/RoomDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/RoomDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/RoomDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/dao/custom/impl/RoomDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard_icon_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard_icon_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/manage_rooms_window_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/manage_rooms_window_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/manage_student_window_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/manage_student_window_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/manage_user_window_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/manage_user_window_form.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/reservation_window_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/reservation_window_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/unPaid_case_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/unPaid_case_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +33,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Less File" />
-        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -54,7 +56,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sahan/IdeaProjects/Hibernate/D24-Hostel-Management-System1/src/main/resources/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sahan/IdeaProjects/ushan kaushalya' s pos system/POS-WebApp-Layered&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -62,6 +64,10 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;/home/sahan/IdeaProjects/Hibernate/D24-Hostel-Management-System1/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -120,7 +126,16 @@
       <workItem from="1694102828850" duration="7520000" />
       <workItem from="1694113402374" duration="20000" />
       <workItem from="1694148414887" duration="5037000" />
-      <workItem from="1694190507880" duration="20148000" />
+      <workItem from="1694190507880" duration="30412000" />
+      <workItem from="1694276104192" duration="2513000" />
+      <workItem from="1694307529418" duration="1707000" />
+      <workItem from="1694313764243" duration="4619000" />
+      <workItem from="1694415467422" duration="214000" />
+      <workItem from="1694418850257" duration="35000" />
+      <workItem from="1694593991839" duration="37000" />
+      <workItem from="1694672959094" duration="417000" />
+      <workItem from="1695699899274" duration="635000" />
+      <workItem from="1698304050661" duration="61000" />
     </task>
     <servers />
   </component>
@@ -134,6 +149,15 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/lk/ijse/d24_hostel_management_system/bo/custom/RoomBO.java</url>
+          <line>24</line>
+          <properties class="lk.ijse.d24_hostel_management_system.bo.custom.RoomBO" method="availableRoomsCount">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

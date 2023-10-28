@@ -21,4 +21,14 @@ public interface RoomBO extends SuperBO {
     String generatenextRoomId();
 
     RoomDTO searchByRoomTypeId(String selectedItem);
+
+    String availableRoomsCount();
+
+    int getAcRoomValue();
+
+    int getNonACRoomValue();
+
+    int getACFoodRoomValue();
+
+    int getNonACFoodValue();
 }

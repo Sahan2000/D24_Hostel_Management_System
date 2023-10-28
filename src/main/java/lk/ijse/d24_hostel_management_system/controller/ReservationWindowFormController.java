@@ -9,7 +9,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -76,6 +78,9 @@ public class ReservationWindowFormController implements Initializable {
     @FXML
     private JFXButton markAsPaid;
 
+    @FXML
+    private PieChart pieChart;
+
     ReservationBO reservationBO = (ReservationBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.RESERVATION);
     RoomBO roomBO = (RoomBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.ROOM);
     @FXML
@@ -108,7 +113,6 @@ public class ReservationWindowFormController implements Initializable {
         setCellValueFactoryRoom();
         refreshRoomTable();
     }
-
     private void setCellValueFactoryRoom() {
         colRoomId.setCellValueFactory(new PropertyValueFactory<>("room_type_id"));
         colType.setCellValueFactory(new PropertyValueFactory<>("type"));
@@ -153,7 +157,15 @@ public class ReservationWindowFormController implements Initializable {
             ReservationTM reservationTm = reservationTbk.getSelectionModel().getSelectedItem();
             if (reservationTm != null) {
                 deleteBtn.setDisable(false);
+
+                ReservationDTO reservationDTO = reservationBO.searchReservationByresId(reservationTm.getRes_id());
+                Integer x = reservationDTO.getRoomDto().getQty() + 1;
+                System.out.println(x);
+                reservationDTO.getRoomDto().setQty(x);
+                roomBO.updateRooms(reservationDTO.getRoomDto());
+
                 reservationBO.deleteReservation(reservationTm.getRes_id());
+
                 new Alert(Alert.AlertType.ERROR, "Reservation Deleted : " + reservationTm.getRes_id()).show();
                 refreshRoomTable();
                 getAll();
@@ -162,7 +174,8 @@ public class ReservationWindowFormController implements Initializable {
             }
             deleteBtn.setDisable(true);
         } catch (RuntimeException exception) {
-            new Alert(Alert.AlertType.ERROR, exception.getMessage()).show();
+            /*new Alert(Alert.AlertType.ERROR, exception.getMessage()).show();*/
+            exception.printStackTrace();
         }
     }
 

@@ -8,10 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="pane" prefHeight="1000.0" prefWidth="1523.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24_hostel_management_system.controller.ReservationWindowFormController">
    <children>
-      <TableView fx:id="reservationTbk" layoutX="123.0" layoutY="209.0" prefHeight="317.0" prefWidth="1275.0">
+      <TableView fx:id="reservationTbk" layoutX="123.0" layoutY="209.0" prefHeight="317.0" prefWidth="1275.0" stylesheets="@../styles/table.css">
         <columns>
           <TableColumn fx:id="colReservationId" prefWidth="232.0" text="Reservation ID" />
           <TableColumn fx:id="colStudentId" prefWidth="301.66668701171875" text="Student ID" />
@@ -53,7 +52,7 @@
             </JFXButton>
          </buttons>
       </ButtonBar>
-      <TableView fx:id="roomTbl" layoutX="123.0" layoutY="639.0" prefHeight="317.0" prefWidth="1275.0">
+      <TableView fx:id="roomTbl" layoutX="123.0" layoutY="639.0" prefHeight="317.0" prefWidth="1275.0" stylesheets="@../styles/table.css">
          <columns>
             <TableColumn fx:id="colRoomId" prefWidth="289.3333435058594" text="Room ID" />
             <TableColumn fx:id="colType" prefWidth="361.66668701171875" text="Type" />

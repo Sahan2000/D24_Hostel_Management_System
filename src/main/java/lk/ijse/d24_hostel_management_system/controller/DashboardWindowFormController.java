@@ -7,8 +7,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
+
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.d24_hostel_management_system.bo.BOFactory;
+import lk.ijse.d24_hostel_management_system.bo.custom.RoomBO;
 
 import java.io.IOException;
 import java.net.URL;
@@ -37,6 +43,9 @@ public class DashboardWindowFormController implements Initializable {
     @FXML
     private JFXButton reservationBtn;
 
+
+
+    RoomBO roomBO = (RoomBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.ROOM);
     @FXML
     void reservationBtnOnAction(ActionEvent event) throws IOException {
         setForms("/view/reservation_window_form.fxml");
@@ -49,7 +58,11 @@ public class DashboardWindowFormController implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+
     }
+
+
 
     private void loadDshboardIcon() throws IOException {
         setForms("/view/dashboard_icon_form.fxml");

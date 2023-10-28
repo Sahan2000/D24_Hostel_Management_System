@@ -32,7 +32,7 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtId" focusColor="#0c829b" layoutX="76.0" layoutY="213.0" promptText="S-0001" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+      <JFXTextField fx:id="txtId" focusColor="#0c829b" layoutX="76.0" layoutY="213.0" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
          <font>
             <Font size="23.0" />
          </font>
@@ -47,7 +47,7 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtKeyMoney" focusColor="#0c829b" layoutX="78.0" layoutY="437.0" onAction="#txtKeyMoneyOnAction" promptText="Panadura" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+      <JFXTextField fx:id="txtKeyMoney" focusColor="#0c829b" layoutX="78.0" layoutY="437.0" onAction="#txtKeyMoneyOnAction" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
          <font>
             <Font size="23.0" />
          </font>
@@ -57,7 +57,7 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtQty" focusColor="#0c829b" layoutX="77.0" layoutY="557.0" onAction="#txtQtyOnAction" promptText="0740872265" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
+      <JFXTextField fx:id="txtQty" focusColor="#0c829b" layoutX="77.0" layoutY="557.0" onAction="#txtQtyOnAction" style="-fx-border-color: #0C829B;" unFocusColor="#0c829b">
          <font>
             <Font size="23.0" />
          </font>
@@ -72,7 +72,7 @@
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <TableView fx:id="roomTble" layoutX="475.0" layoutY="188.0" onMouseClicked="#roomTbleOnMouseClicked" prefHeight="675.0" prefWidth="964.0" style="-fx-border-color: #0C829B;">
+      <TableView fx:id="roomTble" layoutX="475.0" layoutY="188.0" onMouseClicked="#roomTbleOnMouseClicked" prefHeight="675.0" prefWidth="964.0" style="-fx-border-color: #0C829B;" stylesheets="@../styles/table.css">
          <columns>
             <TableColumn fx:id="colId" prefWidth="212.0" text="Room ID" />
             <TableColumn fx:id="colType" prefWidth="260.0" text="Type" />
@@ -85,6 +85,6 @@
             <Font size="23.0" />
          </font>
       </JFXTextField>
-      <ComboBox fx:id="cmbType" layoutX="74.0" layoutY="328.0" prefHeight="45.0" prefWidth="275.0" style="-fx-border-color: #0C829B;" stylesheets="@../styles/comboBox.css" />
+      <ComboBox fx:id="cmbType" layoutX="74.0" layoutY="328.0" prefHeight="45.0" prefWidth="275.0" style="-fx-border-color: #0C829B;"  />
    </children>
 </AnchorPane>

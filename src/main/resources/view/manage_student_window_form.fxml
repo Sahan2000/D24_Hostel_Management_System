@@ -29,7 +29,7 @@
             <Font size="23.0" />
          </font>
       </JFXTextField>
-      <TableView fx:id="studentTbl" layoutX="465.0" layoutY="208.0" onMouseClicked="#studentTblOnMouseClicked" prefHeight="675.0" prefWidth="964.0" style="-fx-border-color: #0C829B;">
+      <TableView fx:id="studentTbl" layoutX="465.0" layoutY="208.0" onMouseClicked="#studentTblOnMouseClicked" prefHeight="675.0" prefWidth="964.0" style="-fx-border-color: #0C829B;" stylesheets="@../styles/table.css">
         <columns>
           <TableColumn fx:id="colStudentId" prefWidth="134.66668701171875" text="Student ID" />
           <TableColumn fx:id="colName" prefWidth="175.66668701171875" text="Name" />

@@ -104,6 +104,7 @@ public class ManageRoomsWindowFormController implements Initializable {
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Room saved!...").show();
                 getAll();
+                generateNextRoomId();
             } else {
                 new Alert(Alert.AlertType.ERROR, "Room not saved!...").show();
             }
@@ -112,6 +113,8 @@ public class ManageRoomsWindowFormController implements Initializable {
             if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Room updated!...").show();
                 getAll();
+                saveBtn.setText("Save");
+                saveBtn.setStyle("-fx-background-color: #0C829B");
             } else {
                 new Alert(Alert.AlertType.ERROR, "Room not updated!...").show();
             }
@@ -169,10 +172,10 @@ public class ManageRoomsWindowFormController implements Initializable {
     }
     private void loadRoomType() {
         ObservableList<String> options = FXCollections.observableArrayList(
-                "AC",
-                "Non-AC",
-                "AC / Food",
-                "Non-Ac/ Food"
+                "AC ",
+                "Non-AC ",
+                "AC-Food ",
+                "Non-Ac-Food "
         );
         cmbType.setItems(options);
     }

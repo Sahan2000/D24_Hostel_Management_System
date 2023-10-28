@@ -43,7 +43,7 @@ public class RoomBOImpl implements RoomBO {
         room.setRoom_type_id(roomDTO.getRoom_type_id());
         room.setType(roomDTO.getType());
         room.setKey_money(roomDTO.getKey_money());
-        room.setType(roomDTO.getType());
+        room.setQty(roomDTO.getQty());
         return roomDAO.update(room);
     }
 
@@ -92,4 +92,30 @@ public class RoomBOImpl implements RoomBO {
 
         return roomDTO;
     }
+
+    @Override
+    public String availableRoomsCount() {
+        return roomDAO.getCount();
+    }
+
+    @Override
+    public int getAcRoomValue() {
+        return roomDAO.getAcRoomValue();
+    }
+
+    @Override
+    public int getNonACRoomValue() {
+        return roomDAO.getNonACRoomValue();
+    }
+
+    @Override
+    public int getACFoodRoomValue() {
+        return roomDAO.getACFoodRoomValue();
+    }
+
+    @Override
+    public int getNonACFoodValue() {
+        return roomDAO.getNonACFoodValue();
+    }
+
 }

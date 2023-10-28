@@ -80,7 +80,7 @@
             <Font size="23.0" />
          </font>
       </JFXTextField>
-      <TableView fx:id="userTbl" layoutX="475.0" layoutY="188.0" onMouseClicked="#userTblOnMouseClicked" prefHeight="675.0" prefWidth="964.0" style="-fx-border-color: #0C829B;">
+      <TableView fx:id="userTbl" layoutX="475.0" layoutY="188.0" onMouseClicked="#userTblOnMouseClicked" prefHeight="675.0" prefWidth="964.0" style="-fx-border-color: #0C829B;" stylesheets="@../styles/table.css">
          <columns>
             <TableColumn fx:id="colId" prefWidth="134.66668701171875" text="User ID" />
             <TableColumn fx:id="colName" prefWidth="175.66668701171875" text="User Name" />
